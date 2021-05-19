@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.App" />
+        <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.6" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="2.2.6" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Design" Version="1.1.6" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.6">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="DB" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Devart.Data, Version=5.0.2333.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+        <HintPath>C:\Program Files (x86)\Devart\dotConnect\SQLite\Devart.Data.dll</HintPath>
+      </Reference>
+      <Reference Include="Devart.Data.Linq, Version=4.9.1878.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+        <HintPath>C:\Program Files (x86)\Devart\dotConnect\Linq\Devart.Data.Linq.dll</HintPath>
+      </Reference>
+      <Reference Include="Devart.Data.Linq.Web, Version=4.9.1878.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+        <HintPath>C:\Program Files (x86)\Devart\dotConnect\Linq\Devart.Data.Linq.Web.dll</HintPath>
+      </Reference>
+      <Reference Include="Devart.Data.Linq.Web.DynamicData, Version=4.9.1878.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+        <HintPath>C:\Program Files (x86)\Devart\dotConnect\Linq\Devart.Data.Linq.Web.DynamicData.dll</HintPath>
+      </Reference>
+      <Reference Include="Devart.Data.SQLite, Version=5.15.1541.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+        <HintPath>C:\Program Files (x86)\Devart\dotConnect\SQLite\Devart.Data.SQLite.dll</HintPath>
+      </Reference>
+      <Reference Include="Devart.Data.SQLite.Design, Version=5.15.1541.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+        <HintPath>C:\Program Files (x86)\Devart\dotConnect\SQLite\Devart.Data.SQLite.Design.dll</HintPath>
+      </Reference>
+      <Reference Include="Devart.Data.SQLite.Linq, Version=4.9.1878.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+        <HintPath>C:\Program Files (x86)\Devart\dotConnect\Linq\Devart.Data.SQLite.Linq.dll</HintPath>
+      </Reference>
+      <Reference Include="Devart.Data.SQLite.Vs, Version=5.15.1541.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+        <HintPath>C:\Program Files (x86)\Devart\dotConnect\SQLite\Devart.Data.SQLite.Vs.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+</Project>

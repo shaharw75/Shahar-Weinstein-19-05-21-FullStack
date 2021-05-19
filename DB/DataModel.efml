@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<efcore p1:name="mainModel" p1:Guid="79da0df2-0b5c-4146-8ed8-3d6d955dffad" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0">
+  <class name="Favorite" entity-set="Favorites" table="Favorites" p1:Guid="eab67292-9797-476f-b552-56881c19057c">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="bac05386-8d79-499a-8211-8987bfff729c">
+      <column name="Id" not-null="True" sql-type="INTEGER" p1:unicode="False" />
+    </id>
+    <property name="CityId" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="39a6532a-40f6-460f-b89a-2606da3943eb">
+      <column name="CityId" not-null="False" sql-type="INTEGER" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="City" entity-set="Cities" table="Cities" p1:Guid="1711c8e3-5fbe-4d2b-8ad8-8f44001643a4">
+    <id name="Id" type="Int64" p1:ValidateRequired="true" p1:Guid="8c38b05d-6dcd-48a0-bb7f-fad531567f87">
+      <column name="Id" not-null="True" sql-type="INTEGER" p1:unicode="False" />
+    </id>
+    <property name="CityName" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="89f517e5-a08f-43ec-8a36-bd20a6964925">
+      <column name="CityName" not-null="False" sql-type="VARCHAR" p1:unicode="False" />
+    </property>
+    <property name="Weather" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="36927531-c247-4a21-98c0-583f0220a578">
+      <column name="Weather" not-null="False" sql-type="INTEGER" p1:unicode="False" />
+    </property>
+    <property name="CityKey" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f09e6bc1-e0d8-4f72-a788-8fbf58cea47c">
+      <column name="CityKey" not-null="False" sql-type="VARCHAR" p1:unicode="False" />
+    </property>
+    <property name="WeatherDate" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f6b8d618-88d2-4bab-b884-b3f0a5731a2b">
+      <column name="WeatherDate" not-null="False" sql-type="DATE" p1:unicode="False" />
+    </property>
+    <property name="WeatherTime" type="Time" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="3e6d4d63-1d5b-4d07-81b6-e6bf4d4e59e9">
+      <column name="WeatherTime" not-null="False" sql-type="TIME" p1:unicode="False" />
+    </property>
+    <property name="WeatherText" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="19c87cfd-c3b6-4e9c-9ab5-20f81a0b41e9">
+      <column name="WeatherText" not-null="False" sql-type="TEXT" p1:unicode="False" />
+    </property>
+  </class>
+  <associations>
+    <association name="Favorite_City" cardinality="OneToMany" p1:Guid="2a707330-b25b-4fd0-9449-2920f8e55b7d">
+      <end1 multiplicity="One" name="Favorite" class="City" relation-class="Favorite" constrained="True" lazy="False" p1:Guid="59a60305-84b7-4dab-b8d5-77d23cb2e1ba">
+        <property name="CityId" />
+      </end1>
+      <end2 multiplicity="Many" name="Cities" class="Favorite" relation-class="City" lazy="False" p1:Guid="6aa680ec-806c-465e-80bf-11d14b1f7123">
+        <property name="Id" />
+      </end2>
+    </association>
+  </associations>
+</efcore>
