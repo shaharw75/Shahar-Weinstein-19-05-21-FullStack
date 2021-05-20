@@ -9,7 +9,7 @@
     </property>
   </class>
   <class name="City" entity-set="Cities" table="Cities" p1:Guid="1711c8e3-5fbe-4d2b-8ad8-8f44001643a4">
-    <id name="Id" type="Int64" p1:ValidateRequired="true" p1:Guid="8c38b05d-6dcd-48a0-bb7f-fad531567f87">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="8c38b05d-6dcd-48a0-bb7f-fad531567f87">
       <column name="Id" not-null="True" sql-type="INTEGER" p1:unicode="False" />
     </id>
     <property name="CityName" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="89f517e5-a08f-43ec-8a36-bd20a6964925">

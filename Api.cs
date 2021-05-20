@@ -60,7 +60,7 @@ namespace RealCommerce
             {
                 var city = context.Cities.FirstOrDefault(x => x.CityKey == key);
                 if (city != null && city.WeatherDate == DateTime.Today.Date &&
-                    city.WeatherTime >= DateTime.Now.TimeOfDay.Add(new TimeSpan(0, 1, 0, 0, 0)))
+                    city.WeatherTime >= DateTime.Now.TimeOfDay.Add(new TimeSpan(0, -1, 0, 0, 0)))
                 {
                     result = new WeatherResult()
                     {
